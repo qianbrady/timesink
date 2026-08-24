@@ -138,7 +138,20 @@ def build_report(args: argparse.Namespace, entries: List, fmt: str) -> str:
     return "\n".join(out)
 
 
+def _force_utf8_stdio() -> None:
+    """Keep Chinese output safe even when stdout/stderr are piped on Windows
+    (ANSI code pages would otherwise raise UnicodeEncodeError)."""
+    for stream in (sys.stdout, sys.stderr):
+        reconfigure = getattr(stream, "reconfigure", None)
+        if reconfigure is not None:
+            try:
+                reconfigure(encoding="utf-8", errors="replace")
+            except (ValueError, OSError):
+                pass
+
+
 def main(argv: Optional[List[str]] = None) -> int:
+    _force_utf8_stdio()
     args = build_parser().parse_args(argv)
 
     if args.file:
