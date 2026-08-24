@@ -58,7 +58,12 @@ def render_table(
 ) -> str:
     """Top-N table with stable, padding-based columns (no printf tricks)."""
     total_col = "TOTAL" if has_time else "TOTAL(无耗时)"
-    lines = [f"Top {top} 命令 · 排序: {'总耗时' if has_time or sort == 'time' else '频次'}"]
+    # 排序文案必须反映实际生效的排序：无耗时数据时即便指定 time 也回退频次
+    if not has_time or sort == "count":
+        effective_sort = "频次"
+    else:
+        effective_sort = "总耗时"
+    lines = [f"Top {top} 命令 · 排序: {effective_sort}"]
     header = "  #  COUNT   TOTAL      AVG    COMMAND"
     lines.append(header)
     if not rows:
