@@ -1,0 +1,23 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "timesink"
+version = "0.1.0"
+description = "终端时间去向复盘 — terminal time review from zsh/bash/PowerShell history"
+readme = "README.md"
+requires-python = ">=3.9"
+license = { text = "MIT" }
+keywords = ["cli", "terminal", "history", "productivity", "zsh", "bash", "powershell"]
+classifiers = [
+    "Environment :: Console",
+    "Programming Language :: Python :: 3",
+    "Topic :: Utilities",
+]
+
+[project.scripts]
+timesink = "timesink.cli:entry"
+
+[tool.setuptools]
+packages = ["timesink"]
