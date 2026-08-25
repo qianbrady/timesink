@@ -1,5 +1,6 @@
 # timesink — terminal time review from your shell history
 
+[![CI](https://github.com/qianbrady/timesink/actions/workflows/ci.yml/badge.svg)](https://github.com/qianbrady/timesink/actions/workflows/ci.yml) [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 终端时间去向复盘：一条命令把 zsh / bash / PowerShell 的历史文件变成 Top-N 命令表、
 24 小时时段热力图和自动化建议。纯 Python 标准库实现，零依赖、默认零网络。
 
