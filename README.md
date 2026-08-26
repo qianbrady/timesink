@@ -2,7 +2,7 @@
 
 ![License](https://img.shields.io/badge/license-MIT-green)
 ![Python](https://img.shields.io/badge/python-3.10%2B-blue)
-![Tests](https://img.shields.io/badge/tests-passing-brightgreen)
+![Tests](https://github.com/qianbrady/timesink/actions/workflows/ci.yml/badge.svg)
 终端时间去向复盘：一条命令把 zsh / bash / PowerShell 的历史文件变成 Top-N 命令表、
 24 小时时段热力图和自动化建议。纯 Python 标准库实现，零依赖、默认零网络。
 
