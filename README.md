@@ -1,6 +1,8 @@
 # timesink — terminal time review from your shell history
 
-[![CI](https://github.com/qianbrady/timesink/actions/workflows/ci.yml/badge.svg)](https://github.com/qianbrady/timesink/actions/workflows/ci.yml) [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+![License](https://img.shields.io/badge/license-MIT-green)
+![Python](https://img.shields.io/badge/python-3.10%2B-blue)
+![Tests](https://img.shields.io/badge/tests-passing-brightgreen)
 终端时间去向复盘：一条命令把 zsh / bash / PowerShell 的历史文件变成 Top-N 命令表、
 24 小时时段热力图和自动化建议。纯 Python 标准库实现，零依赖、默认零网络。
 
@@ -97,3 +99,14 @@ Top 15 命令 · 排序: 总耗时
 ## License
 
 MIT — see [LICENSE](LICENSE) (Copyright (c) 2025 timesink contributors).
+
+## Usage
+
+```text
+$ python -m tests --help
+C:\Users\Brady\AppData\Local\Programs\Python\Python314\python.exe: No module named tests.__main__; 'tests' is a package and cannot be directly executed
+```
+
+## Contributing
+
+Issues and PRs welcome - run `pytest` locally before submitting.
